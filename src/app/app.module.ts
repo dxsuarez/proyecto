@@ -8,10 +8,12 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {ButtonModule} from 'primeng/button';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatButtonModule} from '@angular/material/button';
+import { MenuOpcionComponent } from './menu-opcion/menu-opcion.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MenuOpcionComponent
   ],
   imports: [
     BrowserModule,

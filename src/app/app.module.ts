@@ -10,11 +10,17 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
 import { FavoritoItemComponent } from './favoritos/favorito-item/favorito-item.component';
+import { MenuOpcionComponent } from './menu-opcion/menu-opcion.component';
+import { LoginComponent } from './login/login.component';
+import { RegistroComponent } from './registro/registro.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    FavoritoItemComponent
+    FavoritoItemComponent,
+    MenuOpcionComponent,
+    LoginComponent,
+    RegistroComponent
   ],
   imports: [
     BrowserModule,

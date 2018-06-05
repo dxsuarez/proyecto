@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-menu-opcion',
@@ -12,6 +12,7 @@ import { Component, OnInit } from '@angular/core';
         <a href="#" class="btn btn-primary">{{boton1}}</a>
       </div>
     </div>
+
     <div class="card sa-menu2" style="width: 18rem;">
       <img class="card-img-top" src="{{linkImagen2}}">
       <div class="card-body">
@@ -20,7 +21,7 @@ import { Component, OnInit } from '@angular/core';
         <a href="#" class="btn btn-primary">{{boton2}}</a>
       </div>
     </div>
-    `
+  `
 })
 export class MenuOpcionComponent implements OnInit {
   tarjetaTitulo = ['Usuarios', 'Peticiones'];
@@ -35,6 +36,7 @@ export class MenuOpcionComponent implements OnInit {
   titulo2 = this.tarjetaTitulo[1];
   contenido2 = this.tarjetaContenido[1];
   boton2 = this.tarjetaBoton[1];
+
   constructor() {
   }
 

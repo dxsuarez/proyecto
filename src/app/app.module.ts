@@ -9,11 +9,13 @@ import {ButtonModule} from 'primeng/button';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatButtonModule} from '@angular/material/button';
 import { MenuOpcionComponent } from './menu-opcion/menu-opcion.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MenuOpcionComponent
+    MenuOpcionComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

@@ -8,10 +8,13 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {ButtonModule} from 'primeng/button';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatButtonModule} from '@angular/material/button';
+import {MatCardModule} from '@angular/material/card';
+import { FavoritoItemComponent } from './favoritos/favorito-item/favorito-item.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    FavoritoItemComponent
   ],
   imports: [
     BrowserModule,
@@ -19,7 +22,8 @@ import {MatButtonModule} from '@angular/material/button';
     NgbModule.forRoot(),
     ButtonModule,
     BrowserAnimationsModule,
-    MatButtonModule
+    MatButtonModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

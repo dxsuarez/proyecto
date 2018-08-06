@@ -1,0 +1,30 @@
+module.exports = {
+
+  attributes: {
+
+    id: {
+      type: 'number',
+      required: false,
+      unique: true,
+      autoIncrement: true
+    },
+
+    nombre: {
+      type:'string',
+      required:true
+    },
+
+    descripcion: {
+      type:'string',
+      required:true
+    },
+
+    usuarios: {
+      collection: 'Usuario',
+      via: 'perfiles'
+    }
+
+  },
+
+};
+

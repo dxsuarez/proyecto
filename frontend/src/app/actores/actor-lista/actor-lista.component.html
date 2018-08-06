@@ -1,0 +1,22 @@
+<div>
+  <h5>
+    Actores
+  </h5>
+</div>
+<div class="row">
+  <div class="col-sm-4" *ngFor="let actor of busquedaService.actores">
+    <a [routerLink]="['/actor', actor.id]">
+      <app-actor-item
+        [actor]="actor"
+      >
+      </app-actor-item>
+    </a>
+
+  </div>
+</div>
+<div *ngIf="busquedaService.existeSiguientePaginaActores">
+  <button class="btn btn-info"
+          (click)="cargarMas()">
+    Cargar más
+  </button>
+</div>

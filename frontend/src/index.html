@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Frontend</title>
+  <base href="/">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <link rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+        integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+        crossorigin="anonymous">
+</head>
+<body>
+
+
+<h1>Control LED light</h1>
+<p><input type="checkbox" id="light"></p>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js"></script> <!-- include socket.io client side script -->
+<script>
+  var socket = io('http://192.168.1.4:8080'); //load socket.io-client and connect to the host that serves the page
+  window.addEventListener("load", function(){ //when page loads
+    var lightbox = document.getElementById("light");
+    lightbox.addEventListener("change", function() { //add event listener for when checkbox changes
+      socket.emit("light", Number(this.checked)); //send button status to server (as 1 or 0)
+    });
+  });
+  socket.on('light', function (data) { //get button status from client
+    document.getElementById("light").checked = data; //change checkbox according to push button on Raspberry Pi
+    socket.emit("light", data); //send push button status to back to server
+  });
+</script>
+
+
+<div class="row">
+  <div class="col-sm-1">
+  </div>
+  <div class="col-sm-10">
+    <app-root></app-root>
+  </div>
+  <div class="col-sm-1">
+  </div>
+</div>
+</body>
+</html>

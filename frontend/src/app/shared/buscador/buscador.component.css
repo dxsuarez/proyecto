@@ -1,0 +1,22 @@
+.buscador {
+  position: relative;
+  height: 40px;
+  border: 1px solid black;
+}
+
+.buscador-icono {
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  right: 0;
+  background-image: url('https://es.seaicons.com/wp-content/uploads/2015/11/Apps-Search-Log-icon.png');
+  background-repeat: no-repeat;
+  background-size: 40px 40px;
+}
+
+.buscador-texto {
+  position: absolute;
+  height: 40px;
+  left: 0;
+  right: 40px;
+}

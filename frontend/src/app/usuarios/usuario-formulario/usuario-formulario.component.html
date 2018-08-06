@@ -1,0 +1,15 @@
+<p>
+  usuario-formulario works!
+</p>
+
+<div class="row">
+  <div class="col-sm-4" *ngFor="let tipoRelacionPersona of tiposRelacionPersona">
+{{tipoRelacionPersona.nombre}}
+  </div>
+</div>
+
+
+<select id="empName" ng-model="tipoRelacionPersona" (ngModelChange)="employeeSelected($event)">
+  <option selected="selected" disabled>Employee Name...</option>
+  <option *ngFor="let t of tiposRelacionPersona" [value]="t.id">{{t.nombre}}</option>
+</select>

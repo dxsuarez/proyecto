@@ -1,0 +1,40 @@
+.actor-item {
+  position: relative;
+  height: 100px;
+  background: yellow;
+  margin: 10px 0;
+  font-size: 20px;
+  font-weight: bold;
+  border: 1px solid black;
+}
+
+.actor-item > div {
+  border: 1px solid black;
+}
+
+.actor-item-imagen {
+  position: absolute;
+  height: 50px;
+  width: 150px;
+  background: white;
+  bottom: 0;
+  right: 0;
+}
+
+.actor-item-nombres {
+  position: absolute;
+  height: 50px;
+  width: 150px;
+  background: white;
+  top: 0;
+  left: 0;
+}
+
+.actor-item-apellidos {
+  position: absolute;
+  height: 50px;
+  width: 150px;
+  background: white;
+  bottom: 0;
+  left: 0;
+}

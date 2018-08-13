@@ -33,6 +33,10 @@ module.exports = {
       required:true
     },
 
+    usuario: {
+      model: 'Usuario'
+    },
+
     lugares: {
       collection: 'Lugar',
       via: 'personas'

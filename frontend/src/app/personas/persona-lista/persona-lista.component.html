@@ -1,0 +1,30 @@
+<h2>Personas</h2>
+
+<div>
+  <td><a [routerLink]="['/persona', 0]">
+    Nuevo
+  </a>
+</div>
+
+<table class="table table-hover">
+  <thead>
+  <tr>
+    <th scope="col">Nombre</th>
+    <th scope="col">Apellido</th>
+    <th scope="col">Email</th>
+    <th scope="col">Dirección</th>
+    <th></th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let persona of personas">
+    <td>{{persona.nombre}}</td>
+    <td>{{persona.apellido}}</td>
+    <td>{{persona.email}}</td>
+    <td>{{persona.direccion}}</td>
+    <td><a [routerLink]="['/persona', persona.id]">
+      Editar
+    </a></td>
+  </tr>
+  </tbody>
+</table>

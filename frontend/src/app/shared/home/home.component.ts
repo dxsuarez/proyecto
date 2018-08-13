@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { BusquedaService } from '../busqueda.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -9,6 +10,7 @@ import { BusquedaService } from '../busqueda.service';
 export class HomeComponent implements OnInit {
 
   constructor(
+    private activatedRoute: ActivatedRoute,
     private busquedaService: BusquedaService
   ) { }
 

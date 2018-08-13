@@ -1,17 +1,28 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+
+import { AppRoutingModule } from '../app-routing.module';
+
 import { UsuarioFormularioComponent } from './usuario-formulario/usuario-formulario.component';
-import {ActorListaComponent} from '../actores/actor-lista/actor-lista.component';
+import { UsuarioListaComponent } from './usuario-lista/usuario-lista.component';
+import { PeticionAccesoComponent } from './peticion-acceso/peticion-acceso.component';
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule,
+    AppRoutingModule
   ],
   declarations: [
-    UsuarioFormularioComponent
+    UsuarioFormularioComponent,
+    UsuarioListaComponent,
+    PeticionAccesoComponent
   ],
   exports: [
-    UsuarioFormularioComponent
+    UsuarioListaComponent,
+    UsuarioFormularioComponent,
+    PeticionAccesoComponent
   ]
 })
 export class UsuariosModule { }

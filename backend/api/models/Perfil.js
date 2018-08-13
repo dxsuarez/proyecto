@@ -17,11 +17,6 @@ module.exports = {
     descripcion: {
       type:'string',
       required:true
-    },
-
-    usuarios: {
-      collection: 'Usuario',
-      via: 'perfiles'
     }
 
   },

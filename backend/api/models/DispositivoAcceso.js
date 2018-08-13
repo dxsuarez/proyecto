@@ -24,7 +24,7 @@ module.exports = {
       required:true
     },
 
-    tipoEspacion: {
+    tipoEspacio: {
       model: 'TipoEspacio'
     },
 

@@ -1,0 +1,33 @@
+<h3>Lugares</h3>
+
+<div>
+  Persona:
+  <a [routerLink]="['/persona', personaId]">
+    {{persona.nombre}} {{persona.apellido}}
+  </a>
+</div>
+<br>
+<div>
+  <a [routerLink]="['/lugar', personaId, 0]">
+    Nuevo
+  </a>
+</div>
+<br>
+<table class="table table-hover">
+  <thead>
+  <tr>
+    <th scope="col">Nombre</th>
+    <th scope="col">Descripción</th>
+    <th></th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let lugar of lugares">
+    <td>{{lugar.nombre}}</td>
+    <td>{{lugar.descripcion}}</td>
+    <td><a [routerLink]="['/lugar', personaId, lugar.id]">
+      Editar
+    </a></td>
+  </tr>
+  </tbody>
+</table>

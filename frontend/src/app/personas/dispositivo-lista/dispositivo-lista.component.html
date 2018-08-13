@@ -1,0 +1,35 @@
+<h3>Dispositivos</h3>
+
+<!--<div>
+  Lugar:
+  <a [routerLink]="['/lugar', lugarId]">
+    {{lugar.nombre}}
+  </a>
+</div>-->
+<br>
+<div>
+  <a [routerLink]="['/dispositivo', lugarId, 0]">
+    Nuevo
+  </a>
+</div>
+<br>
+<table class="table table-hover">
+  <thead>
+  <tr>
+    <th scope="col">Número de Sserie</th>
+    <th scope="col">Dirección MAC</th>
+    <th scope="col">Nombre</th>
+    <th></th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let dispositivoAcceso of dispositivosAcceso">
+    <td>{{dispositivoAcceso.numeroSerie}}</td>
+    <td>{{dispositivoAcceso.direccionMAC}}</td>
+    <td>{{dispositivoAcceso.nombre}}</td>
+    <td><a [routerLink]="['/dispositivo', lugarId, dispositivoAcceso.id]">
+      Editar
+    </a></td>
+  </tr>
+  </tbody>
+</table>

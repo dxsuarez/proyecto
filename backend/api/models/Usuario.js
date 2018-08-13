@@ -23,9 +23,8 @@ module.exports = {
       model: 'Persona'
     },
 
-    perfiles: {
-      collection: 'Perfil',
-      via: 'usuarios'
+    perfilId: {
+      type: 'number'
     }
   },
 

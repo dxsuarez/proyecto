@@ -30,19 +30,12 @@ export class BusquedaService {
   ) { }
 
   getActores(): void {
-    this.backendService.getActores()
-      .subscribe(actores => this.actores = actores
-        .filter(actor => actor.nombres.indexOf(this.criterioBusqueda) >= 0)
-        .slice(this.indiceInicialActores, this.indiceFinalActores)
-      );
+
   }
 
 
   getActoresTodos(): void {
-    this.backendService.getActoresTodos()
-      .subscribe(actores => this.actoresTodos = actores
-        .filter(actor => actor.nombres.indexOf(this.criterioBusqueda) >= 0)
-      );
+
   }
 
   cargarActores2() {

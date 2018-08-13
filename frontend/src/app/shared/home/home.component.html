@@ -1,13 +1,31 @@
 <li><a routerLink="">Home</a></li>
 
-<app-usuario-formulario></app-usuario-formulario>
+
 
 <div>
+  <a [routerLink]="['/dispositivos', 0]">
+    Dispositivos
+  </a> |
+  <a [routerLink]="['/usuarios']">
+    Usuarios
+  </a> |
+  <a [routerLink]="['/personas']">
+    Personas
+  </a>
+  |
+  <a [routerLink]="['/peticion']">
+    Petición acceso
+  </a>
+</div>
+
+<app-usuario-lista></app-usuario-lista>
+
+<!--<div>
   <br>
   <div>
     <app-buscador></app-buscador>
   </div>
   <br>
   <app-actor-lista></app-actor-lista>
-</div>
+</div>-->
 

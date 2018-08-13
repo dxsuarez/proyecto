@@ -1,0 +1,27 @@
+<p>
+  Lugar
+</p>
+
+<div>
+  <a [routerLink]="['/dispositivos', lugar.id]">
+    Dispositivos
+  </a>
+</div>
+
+<div>
+
+  <div class="form-group">
+    <label for="nombre">Nombre</label>
+    <input type="text" class="form-control" id="nombre" placeholder="Ingrese el nombre"
+           [(ngModel)]="lugar.nombre">
+  </div>
+
+  <div class="form-group">
+    <label for="descripcion">Descripción</label>
+    <input type="text" class="form-control" id="descripcion" placeholder="Ingrese la descripción"
+           [(ngModel)]="lugar.descripcion">
+  </div>
+
+</div>
+
+<button (click)="guardar()">Guardar</button>

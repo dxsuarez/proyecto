@@ -6,7 +6,6 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { TestComponent } from './test/test.component';
-import { ActoresModule } from './actores/actores.module';
 import { UsuariosModule } from './usuarios/usuarios.module';
 import { SharedModule } from './shared/shared.module';
 import { AppRoutingModule } from './app-routing.module';
@@ -20,7 +19,6 @@ import { AppRoutingModule } from './app-routing.module';
     BrowserModule,
     FormsModule,
     HttpClientModule,
-    ActoresModule,
     UsuariosModule,
     SharedModule,
     AppRoutingModule
